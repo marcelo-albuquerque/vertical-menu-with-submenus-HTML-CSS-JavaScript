@@ -13,12 +13,12 @@ const CategoriesMenu = () => {
         e.preventDefault()
         const item = this
 
-        function ItemFocus() {
+        function ItemCheck() {
             items.forEach(item => {
-                item.classList.remove('focus')
+                item.classList.remove('check')
             })
     
-            item.classList.add('focus')
+            item.classList.add('check')
         }
 
         function RemoveFixed() {
@@ -51,14 +51,14 @@ const CategoriesMenu = () => {
                 })
             } else {
                 const brothers = item.parentElement.parentElement
-                const itemsToHide = brothers.querySelectorAll('a:not(.focus)')
+                const itemsToHide = brothers.querySelectorAll('a:not(.check)')
                 itemsToHide.forEach(item => {
                     item.classList.remove('show')
                 })
             }
         }
 
-        ItemFocus()
+        ItemCheck()
         RemoveFixed()
         ShowSubMenu()
     }
@@ -70,7 +70,7 @@ const CategoriesMenu = () => {
             let link
             const links = Array.from( items )
             links.every(item => {
-                if ( item.classList.contains('focus') ) {
+                if ( item.classList.contains('check') ) {
                     link = item.getAttribute('href')
                     return false
                 }

@@ -63,7 +63,7 @@
     ._allcat-subs a.show {
         display: flex;
     }
-    ._allcat-subs a.focus {
+    ._allcat-subs a.check {
         font-weight: 500;
         color: inherit;
     }
@@ -78,13 +78,13 @@
 ._allcat-subs a:hover .icons.arrow {
     filter: invert(68%) sepia(81%) saturate(4243%) hue-rotate(357deg) brightness(98%) contrast(89%);
 }
-._allcat-subs a.focus .icons.arrow {
+._allcat-subs a.check .icons.arrow {
     display: none;
 }
 
 ._allcat-subs .icons.check {
     display: none;
 }
-    ._allcat-subs a.focus .icons.check {
+    ._allcat-subs a.check .icons.check {
         display: block;
     }
