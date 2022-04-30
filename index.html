@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vertical menu with submenus (HTML + CSS + JavaScript)</title>
+
+        <link href="styles/globals.css" rel="stylesheet">
+        <link href="styles/nav.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <nav id="categories-menu">
+            <h2>Catégories A-Z</h2>
+
+            <ul class="_allcat-main-menu">
+                <li class="_allcat-subs">
+                    <a href="all" class="main-item">
+                        <span>Toutes les rubriques</span>
+                        <img src="/assets/images/icons/accent-color/arrow-right.svg" class="icons arrow" />
+                        <img src="/assets/images/icons/accent-color/check.svg" class="icons check" />
+                    </a>
+                </li>
+
+                <li class="_allcat-subs">
+                    <a href="test2" class="main-item">
+                        <span>IT, Electronics & Telephony</span>
+                        <img src="/assets/images/icons/accent-color/arrow-right.svg" class="icons arrow" />
+                        <img src="/assets/images/icons/accent-color/check.svg" class="icons check" />
+                    </a>
+
+                    <ul class="_lvl2">
+                        <li class="_allcat-subs">
+                            <a href="test3">
+                                <span>IT</span>
+                                <img src="/assets/images/icons/accent-color/arrow-right.svg" class="icons arrow" />
+                                <img src="/assets/images/icons/accent-color/check.svg" class="icons check" />
+                            </a>
+
+                            <ul class="_lvl3">
+                                <li class="_allcat-subs">
+                                    <a href="">
+                                        <span>Computers, Peripherals & Acessories</span>
+                                        <img src="/assets/images/icons/accent-color/arrow-right.svg" class="icons arrow" />
+                                        <img src="/assets/images/icons/accent-color/check.svg" class="icons check" />
+                                    </a>
+
+                                    <ul class="_lvl4">
+                                        <li class="_allcat-subs">
+                                            <a href="">
+                                                <span>Desktops</span>
+                                                <img src="/assets/images/icons/accent-color/arrow-right.svg" class="icons arrow" />
+                                                <img src="/assets/images/icons/accent-color/check.svg" class="icons check" />
+                                            </a>
+                                        </li>
+
+                                        <li class="_allcat-subs">
+                                            <a href="">
+                                                <span>Notebooks</span>
+                                                <img src="/assets/images/icons/accent-color/arrow-right.svg" class="icons arrow" />
+                                                <img src="/assets/images/icons/accent-color/check.svg" class="icons check" />
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <ul class="_lvl2">
+                        <li class="_allcat-subs">
+                            <a href="">
+                                <span>IT 2</span>
+                                <img src="/assets/images/icons/accent-color/arrow-right.svg" class="icons arrow" />
+                                <img src="/assets/images/icons/accent-color/check.svg" class="icons check" />
+                            </a>
+
+                            <ul class="_lvl3">
+                                <li class="_allcat-subs">
+                                    <a href="">
+                                        <span>Computers, Peripherals & Acessories</span>
+                                        <img src="/assets/images/icons/accent-color/arrow-right.svg" class="icons arrow" />
+                                        <img src="/assets/images/icons/accent-color/check.svg" class="icons check" />
+                                    </a>
+
+                                    <ul class="_lvl4">
+                                        <li class="_allcat-subs">
+                                            <a href="">
+                                                <span>Desktops</span>
+                                                <img src="/assets/images/icons/accent-color/arrow-right.svg" class="icons arrow" />
+                                                <img src="/assets/images/icons/accent-color/check.svg" class="icons check" />
+                                            </a>
+                                        </li>
+
+                                        <li class="_allcat-subs">
+                                            <a href="">
+                                                <span>Notebooks</span>
+                                                <img src="/assets/images/icons/accent-color/arrow-right.svg" class="icons arrow" />
+                                                <img src="/assets/images/icons/accent-color/check.svg" class="icons check" />
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <button class="appliquer">Appliquer</button>
+        </nav>
+
+        <script type="module">
+            import { CategoriesMenu } from '/scripts.js'
+
+            CategoriesMenu()
+        </script>
+    </body>
+</html>
