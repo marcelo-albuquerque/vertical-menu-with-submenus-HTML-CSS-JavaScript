@@ -13,7 +13,7 @@ const CategoriesMenu = () => {
         e.preventDefault()
         const item = this
 
-        function ItemCheck() {
+        const ItemCheck = () => {
             items.forEach(item => {
                 item.classList.remove('check')
             })
@@ -21,20 +21,28 @@ const CategoriesMenu = () => {
             item.classList.add('check')
         }
 
-        function RemoveFixed() {
-            items.forEach(item => {
-                item.classList.remove('fixed')
-            })
-        }
+        const SubMenuEvents = () => {
+            const VerifyFixeds = ( items ) => {
+                const RemoveFixed = ( links ) => {
+                    links.forEach(item => {
+                        item.classList.remove('fixed')
+                    });
+                }
 
-        function ShowSubMenu() {
-            function VerifyIfExistsChildrens() {
+                items.forEach(item => {
+                    const links = item.querySelectorAll('a')
+                    RemoveFixed( links )
+                })
+            }
+
+            const GetSubMenus = () => {
                 const childrens = item.parentElement.querySelectorAll(':scope > ul > ._allcat-subs')
 
                 return childrens
             }
 
-            const subMenus = VerifyIfExistsChildrens()
+            const subMenus = GetSubMenus()
+            VerifyFixeds( subMenus )
 
             if ( subMenus.length > 0 ) {
                 item.classList.add( 'fixed' )
@@ -50,8 +58,8 @@ const CategoriesMenu = () => {
                     children.classList.add('show')
                 })
             } else {
-                const brothers = item.parentElement.parentElement
-                const itemsToHide = brothers.querySelectorAll('a:not(.check)')
+                const parent = item.parentElement.parentElement
+                const itemsToHide = parent.querySelectorAll('a:not(.check)')
                 itemsToHide.forEach(item => {
                     item.classList.remove('show')
                 })
@@ -59,8 +67,7 @@ const CategoriesMenu = () => {
         }
 
         ItemCheck()
-        RemoveFixed()
-        ShowSubMenu()
+        SubMenuEvents()
     }
 
     function ButtonEvents( e ) {
